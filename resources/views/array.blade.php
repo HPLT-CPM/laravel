@@ -7,8 +7,8 @@
       @Vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <h1>след страница</h1>    
-    <p>{{$num+10}}</p>
+    <h1>{{ $item['id']}}</h1>    
+    <p>{{ $item['title']}}</p>
     <p>{{$str.',worl'}}</p>
     <div> @for ($i = 0; $i < count($mas); $i++)
         <p>{{ $mas[$i] }}</p>

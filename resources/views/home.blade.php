@@ -13,14 +13,17 @@
     </head>
     <body>
         <header>
-            <h1>Sait</h1>
+            <h1>Проект</h1>
+            <img src="/img/2.png" alt=""> 
         </header>
         <main>
             <p>Text</p>
-            <img src="/img/5d1a5c2s-960.jpg" alt=""> <a href="/win">некст страница</a>
+            <a></a>
+            <img src="/img/qwe.png" alt=""> 
+            <a href="/array">следующая страница</a>
         </main>
          <footer>
-            <p>Chelik 2200</p>
+            <p>&copy;Чулков Дмитрий, 2026</p>
         </footer>
         
     </body>
