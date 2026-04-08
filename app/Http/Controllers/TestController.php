@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function show (){
-    $num = 11;
-    $str = 'wwwww';
-    $mas = [1,3,2,3,4] ;
-    return view('win', compact('num', 'str','mas'));
+    public function show()
+    {
+        $num = 11;
+        $str = "Hello";
+        $mas = [5, 2, -9, 12];
+        return view('array', compact('num','str','mas'));
     }
 }
+
