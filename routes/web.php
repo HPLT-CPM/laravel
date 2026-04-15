@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,15 @@ Route::get('/product/{product}/edit',[ProductController::class,'edit'])->name('p
 Route::put('/products/{product}',[ProductController::class, 'update'])->name('products.update');
 
 Route::delete('/products/{product}',[ProductController::class, 'destroy'])->name('products.destroy');
+
+Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
+
+Route::get('/reports/create', [ReportController::class, 'create'])->name('reports.create');
+
+Route::post('/reports', [ReportController::class, 'store'])->name('reports.store');
+
+Route::get('/reports/{report}/edit', [ReportController::class, 'edit'])->name('reports.edit');
+
+Route::put('/reports/{report}', [ReportController::class, 'update'])->name('reports.update');
+
+Route::delete('/reports/{report}', [ReportController::class, 'destroy'])->name('reports.destroy');

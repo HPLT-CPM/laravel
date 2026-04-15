@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Report;
 use Illuminate\Http\Request;
+use App\Models\Report;
 
-class ProductController extends Controller
+class ReportController extends Controller
 {
     public function index(){
         $reports = Report::all();
@@ -16,11 +16,15 @@ class ProductController extends Controller
     }
     public function store(Request $request){
         $data = $request->validate([
-            'car_number' => 'string|required|max:20',
-            'description' => 'string|required|max:500',
+            'car_number' => 'string',
+            'description' => 'string',
         ]);
+
         Report::create($data);
         return redirect()->route('reports.index');
+    }
+    public function edit(Report $report){
+        return view('report.edit', compact('report'));
     }
     public function update(Request $request, Report $report){
         $data = $request->validate([
@@ -34,5 +38,7 @@ class ProductController extends Controller
         $report->delete();
         return redirect()->back();
     }
-
 }
+
+
+
